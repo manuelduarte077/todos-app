@@ -13,8 +13,7 @@ const routes = (app) => {
     });
 
     router.post('/add', async (req, res) => {
-        const { text } = req.body
-        console.log('Aqui viene ' + text)
+        const { text } = req.query
         let data = await addNew(text)
         if (data.error) {
             res.sendStatus(500)
@@ -25,7 +24,7 @@ const routes = (app) => {
 
     });
 
-    router.put('/todos/update/q', async (req, res) => {
+    router.put('/todos/update', async (req, res) => {
         let { id, completed } = req.query
         let result = await updateTodo(id, completed)
         if(result.error) {

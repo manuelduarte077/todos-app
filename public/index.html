@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todos</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <h1>Hello</h1>
+    <div class="background">
+        <img class="background__image" src="./img/background.jpg" alt="Imagen de fondo">
+    </div>
+    <div class="container">
+        <h1 class="title">Todos</h1>
+        <form class="form" method="post" id="form">
+            <div class="form__container">
+                <input class="form__input" type="text" name="text" id="text">
+                <button class="button form__button" id="save" disabled>Save</button>
+            </div>
+        </form>
+        
+        <div class="list" id="list_elements">
+            
+        </div>
+    </div>
 
-    <script src="/js/app.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>

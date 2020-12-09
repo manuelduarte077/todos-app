@@ -20,7 +20,7 @@ class MySQLManager {
     getAll(){
     
         return new Promise((resolve, reject) => {
-            this.client.query(`SELECT * FROM ${this.dbName}.${this.tableName}`, function(error, result) {
+            this.client.query(`SELECT * FROM ${this.dbName}.${this.tableName} ORDER BY id DESC`, function(error, result) {
                 if(error) {
                     reject(error)
                 }
